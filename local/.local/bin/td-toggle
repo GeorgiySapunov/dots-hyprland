@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# If transmission-daemon is running, will ask to kill, else will ask to start.
+
+DMENU="rofi -dmenu"
+if pidof transmission-daemon >/dev/null ;
+then
+	[ "$(printf "No\\nYes" | ${DMENU} -i -p "Turn off transmission-daemon?")" = "Yes" ] && killall transmission-daemon && notify-send "transmission-daemon disabled."
+else
+	ifinstalled transmission-cli || exit
+	[ "$(printf "No\\nYes" | ${DMENU} -i -p "Turn on transmission daemon?")" = "Yes" ] && transmission-daemon && notify-send "transmission-daemon enabled."
+fi
+sleep 3 && pkill -RTMIN+7 "${STATUSBAR:-waybar}"
