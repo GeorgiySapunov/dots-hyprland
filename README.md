@@ -13,5 +13,5 @@ imagemagick swaylock-effects qt5-wayland qt6-wayland ripgrep rofi-pass
 paru -S catppuccin-gtk-theme-mocha catppuccin-cursors-mocha catppuccin-mocha-grub-theme-git nwg-look
 
 # apps
-paru -S cava pavucontrol lf zsh neovim viewnior noise-suppression-for-voice
+paru -S pavucontrol lf zsh neovim viewnior noise-suppression-for-voice
 ```

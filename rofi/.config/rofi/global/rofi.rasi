@@ -25,10 +25,10 @@ window {
     transparency: "real";
     background-color: #1917244D;
     text-color: #6e6a86;
-    location: west;
-    anchor: west;
-    x-offset: 5px;
-    y-offset: -50px;
+    location: center;
+    anchor: center;
+    x-offset: 0px;
+    y-offset: 0px;
     height: 70%;
     width: 350px;
     orientation: vertical;

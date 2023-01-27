@@ -11,13 +11,13 @@
         "custom/weather",
         "custom/sb-mailbox",
         "custom/sb-news",
+        "custom/sb-torrent",
         "wlr/workspaces"
     ],
     "modules-center": ["hyprland/window"],
     "modules-right": [
         "tray",
         "mpd",
-        "custom/sb-torrent",
         "pulseaudio",
         "pulseaudio#microphone",
         "network",
