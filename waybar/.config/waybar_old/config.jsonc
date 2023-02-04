@@ -5,39 +5,25 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 30, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
+    "height": 0,
     "modules-left": [
-        "custom/launcher",
-        "wlr/workspaces"
-    ],
-    "modules-center": ["hyprland/window"],
-    "modules-right": [
-        "mpd",
-        "tray",
+        "clock",
         "custom/weather",
         "custom/sb-mailbox",
         "custom/sb-news",
         "custom/sb-torrent",
+        "wlr/workspaces"
+    ],
+    "modules-center": ["hyprland/window"],
+    "modules-right": [
+        "tray",
+        "mpd",
         "pulseaudio",
         "pulseaudio#microphone",
         "network",
-        "battery", "battery#bat2",
-        "clock"
+        "battery", "battery#bat2"
     ],
 
-    "custom/launcher": {
-        // "exec": "$HOME/.config/waybar/scripts/spotify.sh",
-        // "return-type": "json",
-        // "max-length": 40,
-        // "format": " <span color='#bf616a'> </span>",
-        // "format": "",
-        // "format": "",
-        "format": "",
-        // "format": " <span color='#bf616a'> 異</span>",
-        // "format": " <span color='#bf616a'> </span>",
-        "on-click": "rofi -show drun"
-    },
     "hyprland/window": {
         "format": "{}"
     },
@@ -60,27 +46,29 @@
         }
     },
     "mpd": {
-        "format": "{stateIcon} {artist} - {album} - {title} ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "",
-        "interval": 10,
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)",
-        "on-click": "setsid -f \"$TERMINAL\" -e ncmpcpp",
-        "on-click-middle": "mpc toggle",
-        "on-scroll-up": "mpc prev",
-        "on-scroll-down": "mpc next",
+    "format": "{stateIcon} {artist} - {album} - {title} ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "",
+    "interval": 10,
+    "state-icons": {
+        "paused": "",
+        "playing": ""
     },
-    "custom/weather" : {
-        "tooltip" : true,
-        "format" : "{}",
-        "interval" : 30,
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
-        "return-type" : "json"
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+    "on-click": "setsid -f \"$TERMINAL\" -e ncmpcpp",
+    "on-click-middle": "mpc toggle",
+    "on-scroll-up": "mpc prev",
+    "on-scroll-down": "mpc next",
+    },
+    "custom/sb-news": {
+        "signal": 6,
+        "interval": "once",
+        "exec": "sb-news",
+        "max-length": 5,
+        "format": " {}",
+        "on-click": "setsid \"$TERMINAL\" -e newsboat",
+        "on-click-middle": "setsid -f newsup >/dev/null exit",
     },
     "custom/sb-mailbox": {
         "signal": 12,
@@ -92,15 +80,6 @@
         "on-click-middle": "setsid -f mw -Y >/dev/null",
         "on-right-click": ""
     },
-    "custom/sb-news": {
-        "signal": 6,
-        "interval": "once",
-        "exec": "sb-news",
-        "max-length": 5,
-        "format": " {}",
-        "on-click": "setsid \"$TERMINAL\" -e newsboat",
-        "on-click-middle": "setsid -f newsup >/dev/null exit",
-    },
     "custom/sb-torrent": {
         "signal": 7,
         "interval": "once",
@@ -110,9 +89,20 @@
         "on-click": "setsid -f \"$TERMINAL\" -e tremc",
         "on-click-middle": "td-toggle",
     },
+    "custom/weather" : {
+        "tooltip" : true,
+        "format" : "{}",
+        "interval" : 30,
+        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type" : "json"
+    },
     "tray": {
         "icon-size": 13,
         "spacing": 10
+    },
+    "clock": {
+        "format": "{: %R   %d/%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -180,9 +170,5 @@
     },
     "battery#bat2": {
         "bat": "BAT2"
-    },
-    "clock": {
-        "format": "{: %R   %d/%m}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     }
 }
