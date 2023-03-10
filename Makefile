@@ -5,5 +5,5 @@ stowall:
 	cp -r local/.local/bin ~/.local/
 
 unstow:
-	rm ~/.local/bin
+	rm -r ~/.local/bin
 	stow --delete */
