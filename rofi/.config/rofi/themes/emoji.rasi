@@ -6,44 +6,44 @@ configuration {
 }
 
 * {
-    foreground:  #ffffff;
-    backlight:   #ccffeedd;
+    foreground:  #cdd6f4;
+    backlight:   #cdd6f4;
     background-color:  transparent;
-    dark: #1c1c1c;
+    dark: #1e1e2e;
     // Black
-    black:       #2c2c2c;
-    lightblack:  #2c2c2c;
-    tlightblack:  #1a1a1add;
+    black:       #1e1e2e;
+    lightblack:  #1e1e2e;
+    tlightblack:  #11111b;
     //
     // Red
-    red:         #cd5c5c;
-    lightred:    #cc5533;
+    red:         #f38ba8;
+    lightred:    #f38ba8;
     //
     // Green
-    green:       #86af80;
-    lightgreen:  #88cc22;
+    green:       #A6E3A1;
+    lightgreen:  #A6E3A1;
     //
     // Yellow
-    yellow:      #e8ae5b;
-    lightyellow:     #ffa75d;
+    yellow:      #F9E2AF;
+    lightyellow:     #F9E2AF;
     //
     // Blue
     /* blue:      #3c3c3c; */
-    blue:      #444444;
-    lightblue:     #87ceeb;
+    blue:      #89b4fa;
+    lightblue:     #89b4fa;
     //
     // Magenta
-    magenta:      #deb887;
-    lightmagenta:     #996600;
+    magenta:      #F5C2E7;
+    lightmagenta:     #F5C2E7;
     //
     // Cyan
-    cyan:      #b0c4de;
-    tcyan:      #ccb0c4de;
-    lightcyan:     #b0c4de;
+    cyan:      #94E2D5;
+    tcyan:      #94E2D5;
+    lightcyan:     #94E2D5;
     //
     // White
-    white:      #bbaa99;
-    lightwhite:     #ddccbb;
+    white:      #BAC2DE;
+    lightwhite:     #A6ADC8;
     //
     // Bold, Italic, Underline
     /* highlight:     underline bold #ffffff; */
@@ -90,7 +90,7 @@ inputbar {
     background-color: @tlightblack;
     border: 1px;
     border-radius:  15px 15px 0px 0px;
-    border-color: #666666;
+    border-color: #1e1e2e;
     font: "Noto Sans 18";
 }
 
@@ -106,7 +106,7 @@ prompt {
 listview {
     padding: 8px 8px 0 8px;
     border-radius: 0px 0px 15px 15px;
-    border-color: #666666;
+    border-color: #1e1e2e;
     border: 0px 1px 1px 1px;
     background-color: @tlightblack;
     dynamic: false;
