@@ -107,7 +107,7 @@
         "exec": "sb-torrent",
         "max-length": 10,
         "format": " {}",
-        "on-click": "setsid -f \"$TERMINAL\" -e tremc",
+        "on-click": "torwrap",
         "on-click-middle": "td-toggle",
     },
     "tray": {
