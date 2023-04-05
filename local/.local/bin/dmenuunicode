@@ -2,8 +2,9 @@
 
 # The famous "get a menu of emojis to copy" script.
 
-# Get user selection via ${DMENU} from emoji file.
 DMENU="rofi -dmenu"
+
+# Get user selection via dmenu from emoji file.
 chosen=$(cut -d ';' -f1 ~/.local/share/larbs/chars/* | ${DMENU} -i -l 30 | sed "s/ .*//")
 
 # Exit if none chosen.
@@ -14,6 +15,6 @@ chosen=$(cut -d ';' -f1 ~/.local/share/larbs/chars/* | ${DMENU} -i -l 30 | sed "
 if [ -n "$1" ]; then
 	xdotool type "$chosen"
 else
-	printf "$chosen" | xclip -selection clipboard
+	printf "%s" "$chosen" | xclip -selection clipboard
 	notify-send "'$chosen' copied to clipboard." &
 fi
