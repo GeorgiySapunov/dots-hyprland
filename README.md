@@ -17,3 +17,10 @@ paru -S ttf-nerd-fonts-symbols-common otf-firamono-nerd
 # apps
 paru -S pavucontrol lf zsh neovim viewnior noise-suppression-for-voice
 ```
+
+```sh
+paru otf-sora inter-font    \
+ttf-fantasque-nerd noto-fonts noto-fonts-emoji ttf-comfortaa  \
+ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd  \
+adobe-source-code-pro-fonts
+```

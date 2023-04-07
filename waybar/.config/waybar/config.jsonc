@@ -63,6 +63,7 @@
         "format": "{stateIcon} {artist} - {album} - {title} ",
         "format-disconnected": "Disconnected ",
         "format-stopped": "",
+        "max-length": 40,
         "interval": 10,
         "state-icons": {
             "paused": "",
@@ -150,13 +151,13 @@
         // "format-ethernet": " wired",
         "format-ethernet": "",
         "format-disconnected": "睊",
-        // "on-click": "nmtui"
+        "on-click": "nmtui",
         // "format-wifi": "{essid} ({signalStrength}%) ",
         // "format-ethernet": "{ipaddr}/{cidr} ",
-        // "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
         // "format-linked": "{ifname} (No IP) ",
         // "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "backlight": {
         "device": "intel_backlight",
