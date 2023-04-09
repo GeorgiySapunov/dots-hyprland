@@ -86,3 +86,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# for pipewire:
+# Ensure XDG_RUNTIME_DIR is set
+unset XDG_RUNTIME_DIR
+export XDG_RUNTIME_DIR=$(mktemp -d /tmp/$(id -u)-runtime-dir.XXX)
