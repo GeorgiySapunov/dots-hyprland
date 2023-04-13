@@ -3,7 +3,8 @@
 # Feed this script a link and it will give dmenu
 # some choice programs to use to open it.
 DMENU="rofi -dmenu"
-feed="${1:-$(printf "%s" | ${DMENU} -p 'Paste URL or file path')}"
+feed="${1:-$(true | ${DMENU} -p 'Paste URL or file path')}"
+
 
 case "$(printf "copy url\\nsxiv\\nsetbg\\nPDF\\nbrowser\\nlynx\\nvim\\nmpv\\nmpv loop\\nmpv float\\nqueue download\\nqueue yt-dlp\\nqueue yt-dlp audio" | dmenu -i -p "Open it with?")" in
 	"copy url") echo "$feed" | xclip -selection clipboard ;;
