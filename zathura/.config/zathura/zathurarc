@@ -13,5 +13,13 @@ map J zoom out
 map i recolor
 map p print
 map g goto top
+map г scroll half-up
+map в scroll half-down
+map В toggle_page_mode
+map к reload
+map К rotate
+map Ш recolor
+map з print
+map п goto top
 include catppuccin-mocha
 set recolor
